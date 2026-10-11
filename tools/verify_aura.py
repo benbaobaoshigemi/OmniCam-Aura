@@ -6,8 +6,8 @@ import os
 
 PROJECT = Path(__file__).resolve().parent.parent
 MODULE = PROJECT / 'module'
-APK = MODULE / 'omnicam-aura-1.1.0.apk'
-ARCHIVE = PROJECT / 'OmniCam-Aura-1.1.0-KSU.zip'
+APK = MODULE / 'omnicam-aura-1.1.1.apk'
+ARCHIVE = PROJECT / 'OmniCam-Aura-1.1.1-KSU.zip'
 sdk_path = os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT')
 if not sdk_path:
     properties = PROJECT / 'local.properties'

@@ -4,6 +4,7 @@ import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import local.jiege.hook.common.Symbols;
 import local.jiege.hook.filters.FilterGroupInjector;
+import local.jiege.hook.masterfilter.MasterPresetListSync;
 import local.jiege.hook.gr.GrPort;
 import local.jiege.hook.highpixel.HighPixelEffects;
 import local.jiege.hook.pop.PopPort;
@@ -23,6 +24,7 @@ public final class ModuleEntry implements IXposedHookLoadPackage, IXposedHookZyg
             Symbols.install("camera", loader, param.appInfo.sourceDir, param.appInfo.dataDir);
             PopPort.installCamera(loader, "com.oplus.camera".equals(param.processName));
             FilterGroupInjector.installCamera(loader);
+            MasterPresetListSync.install(loader);
             X10FilterPort.installCamera(loader);
             HighPixelEffects.installCamera(loader);
             TiltShiftCapture.installCamera(loader);
