@@ -9,6 +9,7 @@ PMA110 相机 7.006.77 的无界面 KernelSU 模块与 LSPosed 插件。
 - 理光 GR 模式、影调、焦距条、快照对焦及相机／相册水印。
 - POP 模式、复古资源与高像素支持；滑杆进成片，成片走 Ultra HDR。
 - 移轴拍照模式。
+- 专业视频（含 O-Log2）强制启用 ISZ：主摄 2x、长焦 6x 去掉 ISO 门限（模块目录放 `disable_pro_video_isz` 可关闭）。
 - Find X10 的清透／琥珀滤镜、调色盘预览与成片、闪光灯亮度、AI 构图配置及哈苏相关滤镜、调色盘和柔光资源。
 
 LSPosed 包名为 `local.omnicam.aura`，作用域为 `com.oplus.camera` 和 `com.coloros.gallery3d`。APK 没有 Activity、启动入口或设置界面，功能固定启用。
