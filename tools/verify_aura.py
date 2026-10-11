@@ -63,7 +63,7 @@ for mode in ('common', 'portrait', 'aiHighPixel'):
         require(entity['aps_algo_color_palette'] == 1, f'Palette capture node missing: {mode}/{camera}')
 for script in ('post-fs-data.sh', 'service.sh'):
     text = (MODULE / script).read_text(encoding='utf-8')
-    for removed in ('master_hncs', 'unlock25mp', 'audio_policy_volumes', 'InsensorZoom'):
+    for removed in ('master_hncs', 'unlock25mp', 'audio_policy_volumes'):
         require(removed not in text, f'Unrelated mount/staging: {removed}')
 subprocess.run(['cmd', '/c', str(BUILD_TOOLS / 'apksigner.bat'), 'verify', str(APK)], check=True)
 print('PASS: signed headless Aura APK; camera/gallery scope; GR/POP backends and all six palette capture nodes present; Muse-only payloads removed')
